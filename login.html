@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        margin-top: 30px;
+      }
+      input {
+        padding: 5px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/nkri.png" alt="FOTO NKRI" width="350" />
+    <hr />
+    <br />
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+      "
+    >
+      <h1>LOGIN</h1>
+      <input type="text" name="uname" id="uname" /><br />
+      <input type="password" name="pass" id="pass" /><br />
+
+      <p style="color: red" id="img"></p>
+    </div>
+
+    <script type="text/javascript">
+      let container, text, pass, uname;
+      container = document.getElementById("nama");
+      text = document.getElementById("img");
+      uname = document.getElementById("uname");
+      pass = document.getElementById("pass");
+      uname.addEventListener("input", () => {
+        switch (uname.value) {
+          case "ali":
+            text.style.color = "green";
+            text.innerText = "Username ada!";
+            break;
+          case "akim":
+            text.style.color = "green";
+            text.innerText = "Username ada!";
+            break;
+          case "loren":
+            text.style.color = "green";
+            text.innerText = "Username ada!";
+            break;
+          default:
+            text.style.color = "red";
+            text.innerText = "Username tidak ada!";
+            break;
+        }
+      });
+      pass.addEventListener("input", function () {
+        if (pass.value == "123") {
+          location.href = "WEB-1.html";
+        } else {
+          text.style.color = "red";
+          text.innerText = "Password salah!";
+        }
+      });
+    </script>
+  </body>
+</html>
